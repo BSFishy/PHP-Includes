@@ -1,13 +1,13 @@
 <?php
 date_default_timezone_set('America/Chicago');
 //echo 'now entering ini.inc.php<br>';
-include_once("ini.inc.php") or die("Could not include ini.inc.php");
+include_once("ini.inc.php");
 //echo 'now entering sessionStart.inc.php<br>';
-include_once("sessionStart.inc.php") or die("Could not include sessionStart.inc.php");
-include_once("db.inc.php") or die("Could not include db.inc.php");
-include_once("htmlMimeMail.php") or die("Could not include htmlMimeMail.inc.php");
-$db = new db($host, $dbname, $dbpass, $dbuser) or die("Could not make variable $db");
-include("includes/calendar.inc.php") or die("Could not include calendar.inc.php");
+include_once("sessionStart.inc.php");
+include_once("db.inc.php");
+include_once("htmlMimeMail.php");
+$db = new db($host, $dbname, $dbpass, $dbuser);
+include("includes/calendar.inc.php");
 $yr = date("Y");
 
 function filter_by_value ($array, $index, $value){
