@@ -22,29 +22,6 @@ function filter_by_value ($array, $index, $value){
     }
     return $newarray;
 }
-function send_email($rec, $subject, $html, $text=null, $images_dir=null){
-    include("ini.inc.php");
-    $mail = new htmlMimeMail();
-    $mail->setHeader('MIME-Version', '1.0' . '\r\n');
-    $mail->setHtml($html, $text, $images_dir);
-    $mail->setReturnPath($returnpath);
-    $mail->setFrom($from);
-    $mail->setSubject($subject);
-    $mail->setHeader('Date', date('r'));
-    $mail->setBcc($bcc);
-// Send Admin email
-    $mail->setSMTPParams($mailserver, $port, $_SERVER['HTTP_HOST'], 1, $username, $emailpass);
-//	if ($_SERVER['HTTP_HOST'] != 'localhost')
-        $send = $mail->send($rec, 'smtp');
-    if ($_SERVER['HTTP_HOST'] == 'localhost' && $subject == $hostsite.' Website SQL Error')
-        echo $html;
-    $niceoutput = '<br><br><div style="padding-left:20px; font-family: Arial, Helvetica, sans-serif;">
-        <span style="color: #0B70CE;"><b>'.$hostsite.' DATABASE ERROR:</b></span><br>There seems to be a problem accessing the database.
-        <br><br>Error data has been saved and we have been notified of the problem.<br><br>We apologize
-        for any inconvinience and will work to resolve this problem as soon as possible.<br><br>
-        <a href="index.php">Back to Home Page</a></div>';
-    return $niceoutput;
-}
 function randomPass($count = 8) {
 		$chars = array("a","A","b","B","c","C","d","D","e","E","f","F","g","G","h","H","i","I","j","J","k","K","l","L",
                     "m","M","n","N","o","O","p","P","q","Q","r","R","s","S","t","T", "u","U","v","V","w","W","x","X","y","Y","z",

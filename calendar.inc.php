@@ -97,7 +97,7 @@ class Calendar {
      */
 
     function getCalendarLink($month, $year) {
-        return "30&cv=1&m=$month&y=$year";
+        return "cv=1&m=$month&y=$year";
     }
 
     /*
