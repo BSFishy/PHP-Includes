@@ -1,15 +1,15 @@
 <?php
 // host
-$host = ($_SERVER['HTTP_HOST'] == 'localhost' ? 'localhost' : 'sql301.my.vg');
-$hostssl = ($_SERVER['HTTP_HOST'] == 'localhost' ? '/localhost' : 'endercraftnetwork.my.vg');
-$host2 = ($_SERVER['HTTP_HOST'] == 'localhost' ? '/home/matt/www/Endercraft/' : '/home/vol7_8/my.vg/myvg_16421860/endercraftnetwork.my.vg/');
+$host = ($_SERVER['HTTP_HOST'] == 'localhost' ? 'localhost' : '');
+$hostssl = ($_SERVER['HTTP_HOST'] == 'localhost' ? '/localhost' : '');
+$host2 = ($_SERVER['HTTP_HOST'] == 'localhost' ? '' : '');
 $wsite = 'localhost';
 $wsitename = 'Websitemane';
 
 // database
-$dbuser = ($_SERVER['HTTP_HOST'] == 'localhost' ? 'endercraft' : 'myvg_16421860');
-$dbname = ($_SERVER['HTTP_HOST'] == 'localhost' ? 'endercraft' : 'myvg_16421860_endercraft');
-$dbpass = ($_SERVER['HTTP_HOST'] == 'localhost' ? '20end16' : '20matt02');
+$dbuser = ($_SERVER['HTTP_HOST'] == 'localhost' ? '' : '');
+$dbname = ($_SERVER['HTTP_HOST'] == 'localhost' ? '' : '');
+$dbpass = ($_SERVER['HTTP_HOST'] == 'localhost' ? '' : '');
 //echo "$host $dbname $dbuser $dbpass";
 
 // brute force login protection
